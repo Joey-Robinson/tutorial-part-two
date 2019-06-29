@@ -1,32 +1,27 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
   plugins: [
-    'gatsby-plugin-sass',
+    "gatsby-plugin-sass",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'markdown-pages',
-        path: '${__dirname}/src/markdown-pages',
+        name: "markdown-pages",
+        path: `${__dirname}/src/markdown-pages`,
+        // This was regular quotes, needs to be back-ticks
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-smartypants',
+            resolve: "gatsby-remark-smartypants",
             options: {
-              dashes: 'oldschool',
-              ellipses: 'false'
-            }
-          }
-        ]
-      }
-    }
-  ]
+              dashes: "oldschool",
+              ellipses: "false",
+            },
+          },
+        ],
+      },
+    },
+  ],
 }
